@@ -6,8 +6,9 @@
 
         {% for task in tasks %}
             <p>
-                {{task}}
+                <a href="{% url 'update_task' task.id %}">{{task}}</a>
             </p>
         {% endfor %}
+        <a href="{% url 'create_task' %}" class="btn btn-primary">Створити задачу</a>
     </div>
 {% endblock content %}
